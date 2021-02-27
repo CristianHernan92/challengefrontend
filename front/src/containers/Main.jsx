@@ -6,6 +6,7 @@ import Home from '../components/Home'
 import Detail from '../components/Detail'
 import Delete from '../components/Delete'
 import EditionForm from '../components/EditionForm'
+import CreationForm from '../components/CreationForm'
 
 
 export default ()=>{   
@@ -16,8 +17,8 @@ export default ()=>{
                         <Route path="/home" component={Home}></Route>
                         <Route path="/showdetail" render={(props)=><Detail {...props} ></Detail>}></Route>
                         <Route path="/delete" render={(props)=><Delete {...props} ></Delete>}></Route>
-                        <Route path="/editionformulary" render={(props)=><EditionForm {...props} ></EditionForm>}></Route>
-                        
+                        <Route path="/editionformulary" render={(props)=><EditionForm {...props} ></EditionForm>}></Route>                        
+                        <Route path="/creationformulary" component={CreationForm}></Route>
                     </Switch>                
                 </div>     
 

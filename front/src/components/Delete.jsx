@@ -7,9 +7,8 @@ export default (props)=> {
     const [Data,setData] = useState(null)
 
     useEffect(()=>{
-        //axios.delete(`https://jsonplaceholder.typicode.com/posts?id=${props.location.state.id}`).then(res=>{setData(res.data)})
         axios.delete(`https://jsonplaceholder.typicode.com/posts/`+props.location.state.id).then(res=>{setData(res.data)})
-    },[])    
+    },[])   
 
     return !Data ?
         <div style={{display:'flex',flexDirection:'column',alignItems:'center',paddingTop:'1%'}}>        
